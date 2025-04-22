@@ -16,6 +16,25 @@
                 <h4 class="p-6 text-gray-900 dark:text-gray-100">
                     Halaman Data Lemari
                 </h4>
+
+                <div class="mt-4 overflow-x-auto px-6 py-6">
+                    <table class="min-w-full bg-slate-50 dark:bg-transparent">
+                        <thead class="bg-gray-300 dark:bg-red-600 dark:text-white">
+                            <th class="py-1 px-4 uppercase text-sm">Nama Lemari</th>
+                            <th class="py-1 px-4 uppercase text-sm">Action</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="py-2 px-4 text-sm dark:text-white">Lemari 1</td>
+                                <td class="py-2 px-4 text-sm text-center ">
+                                    <a href="" class="dark:text-red-600 p-2">detail</a>
+                                    <a href="" class="dark:text-red-600 p-2">hapus</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
             </div>
         </div>
     </div>
