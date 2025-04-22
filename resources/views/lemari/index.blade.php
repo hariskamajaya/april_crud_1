@@ -16,7 +16,6 @@
                 <h4 class="p-6 text-gray-900 dark:text-gray-100">
                     Halaman Data Lemari
                 </h4>
-
                 <div class="mt-4 overflow-x-auto px-6 py-6">
                     <table class="min-w-full bg-slate-50 dark:bg-transparent">
                         <thead class="bg-gray-300 dark:bg-red-600 dark:text-white">
@@ -27,8 +26,8 @@
                             <tr>
                                 <td class="py-2 px-4 text-sm dark:text-white">Lemari 1</td>
                                 <td class="py-2 px-4 text-sm text-center ">
-                                    <a href="" class="dark:text-red-600 p-2">detail</a>
-                                    <a href="" class="dark:text-red-600 p-2">hapus</a>
+                                    <a href="" class="dark:text-red-600 px-6 py-2 font-semibold hover:bg-red-600 hover:text-white rounded-md">detail</a>
+                                    <a href="" class="dark:text-red-600 px-6 py-2 font-semibold hover:bg-red-600 hover:text-white rounded-md">hapus</a>
                                 </td>
                             </tr>
                         </tbody>
