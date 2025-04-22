@@ -20,6 +20,7 @@ Route::middleware('auth')->group(function () {
 
 //route lemari
 Route::get('lemari', [LemariController::class, 'index'])->name('lemari.index');
+Route::get('lemari/create', [LemariController::class, 'create'])->name('lemari.create');
 
 
 require __DIR__.'/auth.php';

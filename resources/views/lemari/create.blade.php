@@ -5,7 +5,6 @@
                 Tambah Lemari
             </h2>
         </div>
-
     </x-slot>
 
     <div class="py-12">
@@ -16,23 +15,21 @@
                 </h4>
                 <div class="mt-4 overflow-x-auto px-6 py-6">
                     <form action="" method="post">
-                        <div>
+                        <div class="mt-4">
                             <x-input-label for="nama_lemari" :value="__('Nama Lemari')" />
                             <x-text-input id="nama_lemari" class="block mt-1 w-full" type="text" name="nama_lemari" :value="old('nama_lemari')" required />
                             <x-input-error :messages="$errors->get('nama_lemari')" class="mt-2" />
                         </div>
-                        <div>
+                        <div class="mt-4">
                             <x-input-label for="deskripsi" :value="__('Deskripsi')" />
                             <x-text-input id="deskripsi" class="block mt-1 w-full" type="text" name="deskripsi" :value="old('deskripsi')" required />
                             <x-input-error :messages="$errors->get('deskripsi')" class="mt-2" />
                         </div>
-
                         <div class="mt-4">
                             <button class="bg-red-600 hover:bg-red-800 text-white px-6 py-2">Tambah</button>
                         </div>
                     </form>
                 </div>
-
             </div>
         </div>
     </div>
