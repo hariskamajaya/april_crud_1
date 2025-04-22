@@ -11,4 +11,12 @@ class LemariController extends Controller
         
         return view('lemari.index');
     }
+
+    public function create()
+    {
+        
+        return view('lemari.create');
+    }
+
+
 }
