@@ -8,6 +8,7 @@ class LemariController extends Controller
 {
     public function index()
     {
+        
         return view('lemari.index');
     }
 }
