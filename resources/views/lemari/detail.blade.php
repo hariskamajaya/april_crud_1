@@ -32,27 +32,25 @@
 
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <h4 class="p-6  text-gray-900 dark:text-gray-100">
-                    Masukan data lemari baru
+                    Ubah data {{$data->nama_lemari}}
                 </h4>
                 <div class="overflow-x-auto px-6 py-6">
-                    <form action="{{route('lemari.post')}}" method="post">
-
+                    <form action="" method="post">
                         @csrf
-
                         <div class="mt-4">
                             <x-input-label for="nama_lemari" :value="__('Nama Lemari')" />
                             <x-text-input id="nama_lemari" class="block mt-1 w-full" type="text" name="nama_lemari"
-                                :value="old('nama_lemari')" required />
+                                :value="old('nama_lemari')" value="{{$data->nama_lemari}}" required />
                             <x-input-error :messages="$errors->get('nama_lemari')" class="mt-2" />
                         </div>
                         <div class="mt-4">
                             <x-input-label for="deskripsi" :value="__('Deskripsi')" />
                             <x-text-input id="deskripsi" class="block mt-1 w-full" type="text" name="deskripsi"
-                                :value="old('deskripsi')" required />
+                                :value="old('deskripsi')" value="{{$data->deskripsi}}" required />
                             <x-input-error :messages="$errors->get('deskripsi')" class="mt-2" />
                         </div>
                         <div class="mt-4">
-                            <button class="bg-red-600 hover:bg-red-800 text-white px-6 py-2 rounded-md">Tambah</button>
+                            <button class="bg-red-600 hover:bg-red-800 text-white px-6 py-2 rounded-md">Edit</button>
                         </div>
                     </form>
                 </div>
