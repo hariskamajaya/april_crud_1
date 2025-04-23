@@ -65,5 +65,4 @@ class LemariController extends Controller
         return redirect()->route('lemari.index')->with('success', 'Data berhasil dihapus');
     }
 
-
 }
