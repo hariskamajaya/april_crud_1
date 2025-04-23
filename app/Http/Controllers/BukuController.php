@@ -95,6 +95,7 @@ class BukuController extends Controller
     {
         $data = Buku::findOrFail($id);
         $data->delete();
+        Storage::delete('public/images/cover/'.$data->cover);
         return redirect()->route('buku.index');
     }
 }
