@@ -36,7 +36,12 @@ class LemariController extends Controller
         Lemari::create($input);
         return redirect()->route('lemari.index')->with('success', 'Data berhasil disimpan');
 
+    }
 
+    public function show($id)
+    {
+        $data = Lemari::findOrFail($id);
+        return view('lemari.detail', compact('data'));
     }
 
 

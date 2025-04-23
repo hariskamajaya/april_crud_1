@@ -22,10 +22,10 @@ Route::middleware('auth')->group(function () {
     Route::get('lemari', [LemariController::class, 'index'])->name('lemari.index');
     Route::get('lemari/create', [LemariController::class, 'create'])->name('lemari.create');
     Route::post('lemari', [LemariController::class, 'store'])->name('lemari.post');
+    Route::get('lemari/{param}', [LemariController::class, 'show'])->name('lemari.show');
+
 
 });
-
-
 
 
 require __DIR__ . '/auth.php';
