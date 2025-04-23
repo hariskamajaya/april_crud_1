@@ -16,11 +16,14 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    // routing untuk lemari
+    //route lemari
+    Route::get('lemari', [LemariController::class, 'index'])->name('lemari.index');
+    Route::get('lemari/create', [LemariController::class, 'create'])->name('lemari.create');
 });
 
-//route lemari
-Route::get('lemari', [LemariController::class, 'index'])->name('lemari.index');
-Route::get('lemari/create', [LemariController::class, 'create'])->name('lemari.create');
 
 
-require __DIR__.'/auth.php';
+
+require __DIR__ . '/auth.php';
