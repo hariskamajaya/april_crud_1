@@ -10,10 +10,10 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <h4 class="p-6 text-gray-900 dark:text-gray-100">
+                <h4 class="px-6 py-2 text-gray-900 dark:text-gray-100">
                     Masukan data lemari baru
                 </h4>
-                <div class="mt-4 overflow-x-auto px-6 py-6">
+                <div class="overflow-x-auto px-6 py-6">
                     <form action="" method="post">
                         <div class="mt-4">
                             <x-input-label for="nama_lemari" :value="__('Nama Lemari')" />
