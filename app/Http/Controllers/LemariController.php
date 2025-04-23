@@ -56,7 +56,13 @@ class LemariController extends Controller
 
         $data->update($input);
         return back()->with('success', 'Data berhasil diubah');
+    }
 
+    public function delete($id)
+    {
+        $data = Lemari::findOrFail($id);
+        $data->delete();
+        return redirect()->route('lemari.index')->with('success', 'Data berhasil dihapus');
     }
 
 

@@ -28,10 +28,14 @@
                                 <tr>
                                     <td class="py-2 px-4 text-sm dark:text-white">{{$item->nama_lemari}}</td>
                                     <td class="py-2 px-4 text-sm text-center ">
-                                        <a href="{{route('lemari.show', $item->id)}}"
-                                            class="dark:text-red-600 px-6 py-2 font-semibold hover:bg-red-600 hover:text-white rounded-md">detail</a>
-                                        <a href=""
-                                            class="dark:text-red-600 px-6 py-2 font-semibold hover:bg-red-600 hover:text-white rounded-md">hapus</a>
+
+                                        <form action="{{route('lemari.delete')}}" method="post">
+                                            @csrf
+                                            @method('delete')
+                                            <a href="{{route('lemari.show', $item->id)}}"
+                                                class="dark:text-red-600 px-6 py-2 font-semibold hover:bg-red-600 hover:text-white rounded-md">detail</a>
+                                            <button type="submit" class="dark:text-red-600 px-6 py-2 font-semibold hover:bg-red-600 hover:text-white rounded-md">hapus</button>
+                                        </form>
                                     </td>
                                 </tr>
                             @endforeach

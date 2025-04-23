@@ -19,11 +19,12 @@ Route::middleware('auth')->group(function () {
 
     // routing untuk lemari
     //route lemari
-    Route::get('lemari', [LemariController::class, 'index'])->name('lemari.index');
-    Route::get('lemari/create', [LemariController::class, 'create'])->name('lemari.create');
-    Route::post('lemari', [LemariController::class, 'store'])->name('lemari.post');
-    Route::get('lemari/{param}', [LemariController::class, 'show'])->name('lemari.show');
-    Route::put('lemari/{param}', [LemariController::class, 'update'])->name('lemari.update');
+    Route::get('lemari', [LemariController::class, 'index'])->name('lemari.index'); //route index menamplilkan halaman list data
+    Route::get('lemari/create', [LemariController::class, 'create'])->name('lemari.create'); //route untuk menampilkan halaman create
+    Route::post('lemari', [LemariController::class, 'store'])->name('lemari.post'); // route mengirimkan data lemari
+    Route::get('lemari/{param}', [LemariController::class, 'show'])->name('lemari.show'); //route detail menampilkan halaman detail lemari
+    Route::put('lemari/{param}', [LemariController::class, 'update'])->name('lemari.update'); //route mengupdate data lemari
+    Route::delete('lemari/{param}', [LemariController::class, 'delete'])->name('lemari.delete'); //route menghapus data lemari.
 
 
 });
