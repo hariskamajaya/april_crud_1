@@ -5,7 +5,7 @@
                 Buku
             </h2>
 
-            <a href="{{route('lemari.create')}}"
+            <a href="{{route('buku.create')}}"
                 class="bg-red-600 px-3 py-2 text-white rounded-md hover:bg-red-700">Tambah Buku</a>
         </div>
 
