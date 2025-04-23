@@ -29,7 +29,10 @@
                         <tbody>
                             @foreach ($data as $item)
                                 <tr>
-                                    <td class="py-2 px-4 text-sm dark:text-white">{{$item->nama_lemari}}</td>
+                                    <td class="py-2 px-4 text-sm dark:text-white">{{$item->judul_buku}}</td>
+                                    <td class="py-2 px-4 text-sm dark:text-white">{{$item->penulis}}</td>
+                                    <td class="py-2 px-4 text-sm dark:text-white">{{$item->penerbit}}</td>
+                                    <td class="py-2 px-4 text-sm dark:text-white">{{$item->lemari->nama_lemari}}</td>
                                     <td class="py-2 px-4 text-sm text-center ">
 
                                         <form action="{{route('lemari.delete', $item->id)}}" method="post">

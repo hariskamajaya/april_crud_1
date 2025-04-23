@@ -11,4 +11,10 @@ class Buku extends Model
     protected $fillable = [
         'judul_buku', 'penulis', 'penerbit', 'cover', 'deskripsi', 'id_lemari'
     ];
+
+    public function lemari()
+    {
+        return $this->belongsTo(Lemari::class, 'id_lemari');
+    }
+
 }
