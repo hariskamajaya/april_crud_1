@@ -2,7 +2,7 @@
     <x-slot name="header">
         <div class="flex justify-between items-center">
             <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-                Detail Lemari
+                Detail Buku
             </h2>
         </div>
     </x-slot>
@@ -12,14 +12,25 @@
 
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg mb-3">
                 <h4 class="p-6 text-gray-900 dark:text-gray-100">
-                    Detail {{$data->nama_lemari}}
+                    Detail {{$data->judul_buku}}
                 </h4>
                 <div class="overflow-x-auto px-6 py-6">
                     <table class="min-w-full bg-slate-50 dark:bg-transparent">
                         <tbody>
                             <tr>
-                                <td class="py-2 text-sm dark:text-white">Nama Lemari</td>
-                                <td class="py-2 text-sm dark:text-white">{{$data->nama_lemari}}</td>
+                                <td class="py-2 text-sm dark:text-white">Judul buku</td>
+                                <td class="py-2 text-sm dark:text-white">{{$data->judul_buku}}</td>
+                                <td class="py-2 text-sm" rowspan="4">
+                                    <img src="{{asset('storage/images/cover/'.$data->cover)}}" alt="cover buku" width="150">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 text-sm dark:text-white">Penulis</td>
+                                <td class="py-2 text-sm dark:text-white">{{$data->penulis}}</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 text-sm dark:text-white">Penerbit</td>
+                                <td class="py-2 text-sm dark:text-white">{{$data->penerbit}}</td>
                             </tr>
                             <tr>
                                 <td class="py-2 text-sm dark:text-white">Deskripsi</td>

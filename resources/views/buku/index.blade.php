@@ -35,10 +35,10 @@
                                     <td class="py-2 px-4 text-sm dark:text-white">{{$item->lemari->nama_lemari}}</td>
                                     <td class="py-2 px-4 text-sm text-center ">
 
-                                        <form action="{{route('lemari.delete', $item->id)}}" method="post">
+                                        <form action="{{route('buku.delete', $item->id)}}" method="post">
                                             @csrf
                                             @method('delete')
-                                            <a href="{{route('lemari.show', $item->id)}}"
+                                            <a href="{{route('buku.show', $item->id)}}"
                                                 class="dark:text-red-600 px-6 py-2 font-semibold hover:bg-red-600 hover:text-white rounded-md">detail</a>
                                             <button type="submit" class="dark:text-red-600 px-6 py-2 font-semibold hover:bg-red-600 hover:text-white rounded-md"
                                             onclick="return confirm('Yakin data ini akan dihapus?')">hapus</button>
