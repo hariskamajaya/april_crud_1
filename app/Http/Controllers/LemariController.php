@@ -44,5 +44,20 @@ class LemariController extends Controller
         return view('lemari.detail', compact('data'));
     }
 
+    public function update(Request $request, $id)
+    {
+        $data = Lemari::findOrFail($id);
+        $input = $request->all();
+
+        $request->validate([
+            'nama_lemari' => 'required|string|min:3|max:30|unique:lemari,nama_lemari',
+            'deskripsi' => 'required|string|min:3|max:100'
+        ]);
+
+        $data->update($input);
+        return back()->with('success', 'Data berhasil diubah');
+
+    }
+
 
 }
