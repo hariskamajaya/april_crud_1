@@ -21,6 +21,8 @@ Route::middleware('auth')->group(function () {
     //route lemari
     Route::get('lemari', [LemariController::class, 'index'])->name('lemari.index');
     Route::get('lemari/create', [LemariController::class, 'create'])->name('lemari.create');
+    Route::post('lemari', [LemariController::class, 'store'])->name('lemari.post');
+
 });
 
 
