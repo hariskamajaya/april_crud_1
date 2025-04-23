@@ -14,7 +14,7 @@
                     Masukan data buku baru
                 </h4>
                 <div class="overflow-x-auto p-6">
-                    <form action="{{route('buku.post')}}" method="post">
+                    <form action="{{route('buku.post')}}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="mt-4">
                             <x-input-label for="judul_buku" :value="__('Judul Buku')" />
@@ -50,6 +50,12 @@
                             <x-input-label for="cover" :value="__('Cover')" />
                             <x-text-input id="cover" class="block mt-1 w-full" type="file" name="cover" :value="old('cover')" required />
                             <x-input-error :messages="$errors->get('cover')" class="mt-2" />
+                        </div>
+
+                        <div class="mt-4">
+                            <x-input-label for="deskripsi" :value="__('Deskripsi Buku')" />
+                            <x-text-input id="deskripsi" class="block mt-1 w-full" type="text" name="deskripsi" :value="old('deskripsi')" required />
+                            <x-input-error :messages="$errors->get('deskripsi')" class="mt-2" />
                         </div>
 
                         <div class="mt-4">

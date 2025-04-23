@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Buku;
 use App\Models\Lemari;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class BukuController extends Controller
@@ -29,12 +30,24 @@ class BukuController extends Controller
 
         // validator untuk syarat isi form
         $request->validate([
-            'nama_lemari' => 'required|string|min:3|max:30|unique:lemari,nama_lemari',
-            'deskripsi' => 'required|string|min:3|max:100'
+            'judul_buku' => 'required|string|min:3|max:30|unique:buku,judul_buku',
+            'penulis' => 'required|string|min:3|max:100',
+            'penerbit' => 'required|string|min:3|max:100',
+            'cover' => 'required|file|max:10240',
+            'deskripsi' => 'required|string|min:3|max:200',
         ]);
 
-        // menyimpan data ke database
+        if($request->hasFile('cover'))
+        {
+            $gambar = $request->file('cover'); //mengambil data file yang di upload
+            $path = 'public/images/cover';
+            $ext = $gambar->getClientOriginalExtension();
+            $nama = 'cover_'.Carbon::now()->format('Ymdhis').'.'.$ext;
+            $gambar->storeAs($path, $nama);
+            $input['cover'] = $nama;
+        }
         
+        return $input;
 
     }
 
