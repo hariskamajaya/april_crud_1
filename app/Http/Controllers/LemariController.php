@@ -10,7 +10,7 @@ class LemariController extends Controller
     // menampilkan semua data lemari
     public function index()
     {
-        $data = Lemari::all();
+        $data = Lemari::paginate(5);
         return view('lemari.index', compact('data'));
     }
 
