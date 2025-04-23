@@ -10,7 +10,8 @@ class LemariController extends Controller
     // menampilkan semua data lemari
     public function index()
     {
-        return view('lemari.index');
+        $data = Lemari::all();
+        return view('lemari.index', compact('data'));
     }
 
     // menampilkan halaman create
@@ -27,7 +28,7 @@ class LemariController extends Controller
 
         // validator untuk syarat isi form
         $request->validate([
-            'nama_lemari' => 'required|string|min:3|max:30',
+            'nama_lemari' => 'required|string|min:3|max:30|unique:lemari,nama_lemari',
             'deskripsi' => 'required|string|min:3|max:100'
         ]);
 

@@ -5,7 +5,8 @@
                 Lemari
             </h2>
 
-            <a href="{{route('lemari.create')}}" class="bg-red-600 px-3 py-2 text-white rounded-md hover:bg-red-700">Tambah Lemari</a>
+            <a href="{{route('lemari.create')}}"
+                class="bg-red-600 px-3 py-2 text-white rounded-md hover:bg-red-700">Tambah Lemari</a>
         </div>
 
     </x-slot>
@@ -23,13 +24,17 @@
                             <th class="py-1 px-4 uppercase text-sm">Action</th>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td class="py-2 px-4 text-sm dark:text-white">Lemari 1</td>
-                                <td class="py-2 px-4 text-sm text-center ">
-                                    <a href="" class="dark:text-red-600 px-6 py-2 font-semibold hover:bg-red-600 hover:text-white rounded-md">detail</a>
-                                    <a href="" class="dark:text-red-600 px-6 py-2 font-semibold hover:bg-red-600 hover:text-white rounded-md">hapus</a>
-                                </td>
-                            </tr>
+                            @foreach ($data as $item)
+                                <tr>
+                                    <td class="py-2 px-4 text-sm dark:text-white">{{$item->nama_lemari}}</td>
+                                    <td class="py-2 px-4 text-sm text-center ">
+                                        <a href=""
+                                            class="dark:text-red-600 px-6 py-2 font-semibold hover:bg-red-600 hover:text-white rounded-md">detail</a>
+                                        <a href=""
+                                            class="dark:text-red-600 px-6 py-2 font-semibold hover:bg-red-600 hover:text-white rounded-md">hapus</a>
+                                    </td>
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
