@@ -50,7 +50,7 @@ class LemariController extends Controller
         $input = $request->all();
 
         $request->validate([
-            'nama_lemari' => 'required|string|min:3|max:30|unique:lemari,nama_lemari',
+            'nama_lemari' => 'required|string|min:3|max:30',
             'deskripsi' => 'required|string|min:3|max:100'
         ]);
 
