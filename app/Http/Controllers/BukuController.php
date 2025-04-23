@@ -71,7 +71,7 @@ class BukuController extends Controller
             'judul_buku' => 'required|string|min:3|max:30',
             'penulis' => 'required|string|min:3|max:100',
             'penerbit' => 'required|string|min:3|max:100',
-            'cover' => 'required|file|max:10240',
+            'cover' => 'file|max:10240',
             'deskripsi' => 'required|string|min:3|max:200',
         ]);
 
