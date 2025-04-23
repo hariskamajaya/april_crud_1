@@ -55,7 +55,8 @@ class BukuController extends Controller
     public function show($id)
     {
         $data = Buku::findOrFail($id);
-        return view('buku.detail', compact('data'));
+        $lemari = Lemari::all();
+        return view('buku.detail', compact('data', 'lemari'));
     }
 
     public function update(Request $request, $id)
