@@ -2,19 +2,23 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Buku;
+use App\Models\Lemari;
 use Illuminate\Http\Request;
 
 class BukuController extends Controller
 {
     public function index()
     {
-        
+        $data = Buku::paginate(5);
+        return view('buku.index', compact('data'));
     }
 
     // menampilkan halaman create
     public function create()
     {
-        return view('lemari.create');
+        $lemari = Lemari::all();
+        return view('buku.create', compact('lemari'));
     }
 
     // menyimpan data lemari

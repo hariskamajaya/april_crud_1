@@ -2,11 +2,11 @@
     <x-slot name="header">
         <div class="flex justify-between items-center">
             <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-                Lemari
+                Buku
             </h2>
 
             <a href="{{route('lemari.create')}}"
-                class="bg-red-600 px-3 py-2 text-white rounded-md hover:bg-red-700">Tambah Lemari</a>
+                class="bg-red-600 px-3 py-2 text-white rounded-md hover:bg-red-700">Tambah Buku</a>
         </div>
 
     </x-slot>
@@ -15,12 +15,15 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <h4 class="px-6 mt-4 text-gray-900 dark:text-gray-100">
-                    Halaman Data Lemari
+                    Halaman Data Buku
                 </h4>
                 <div class="overflow-x-auto px-6 py-6">
                     <table class="min-w-full bg-slate-50 dark:bg-transparent">
                         <thead class="bg-gray-300 dark:bg-red-600 dark:text-white">
-                            <th class="py-1 px-4 uppercase text-sm">Nama Lemari</th>
+                            <th class="py-1 px-4 uppercase text-sm">Judul Buku</th>
+                            <th class="py-1 px-4 uppercase text-sm">Penulis</th>
+                            <th class="py-1 px-4 uppercase text-sm">Penerbit</th>
+                            <th class="py-1 px-4 uppercase text-sm">Lemari</th>
                             <th class="py-1 px-4 uppercase text-sm">Action</th>
                         </thead>
                         <tbody>
