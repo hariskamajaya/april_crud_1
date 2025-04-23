@@ -47,7 +47,8 @@ class BukuController extends Controller
             $input['cover'] = $nama;
         }
         
-        return $input;
+        Buku::create($input);
+        return redirect()->route('buku.index')->with('success', 'Data berhasil dibuat');
 
     }
 
